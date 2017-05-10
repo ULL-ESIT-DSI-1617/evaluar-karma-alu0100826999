@@ -23,9 +23,13 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+        
       'test/index.html',
-      'test/*.js',
-      'conversor/Temperature.js'
+      'test/mocha.js',
+      'test/chai.js',
+      'conversor/Temperature.js',
+      'test/tests.js'
+      
     ],
 
 
@@ -76,6 +80,10 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, it capture browsers, run tests and exit
-    singleRun: false
+    singleRun: false,
+    
+    hostname: process.env.IP,
+    port: process.env.PORT
+    
   });
 };
