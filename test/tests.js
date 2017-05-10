@@ -1,6 +1,14 @@
 var assert = chai.assert;
 
 suite('temperature', function() {
+    setup(function(){
+        if (typeof __html__ !== 'undefined') {
+            document.body.innerHTML = __html__['tests/test.html'];
+            original = document.getElementById('original');
+            converted = document.getElementById('converted');
+      }
+    });
+    
     test('45C to F', function() {
         original.value = "45C to F";
         calculate();

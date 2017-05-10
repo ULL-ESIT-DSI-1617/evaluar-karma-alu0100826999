@@ -17,13 +17,13 @@ module.exports = function(config) {
     },
 
     preprocessors: {
-          'tests/test.html': ['html2js']
+          'test/tests.html': ['html2js']
     },
 
 
     // list of files / patterns to load in the browser
     files: [
-      'test/test.html',
+      'test/tests.html',
       'test/*.js',
       'conversor/Temperature.js'
     ],
